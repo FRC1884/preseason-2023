@@ -19,8 +19,7 @@ public class ExampleElevator extends SubsystemBase {
   private static final int CurrentLimit = 20;
 
   public static ExampleElevator getInstance() {
-    if (instance == null)
-      instance = new ExampleElevator();
+    if (instance == null) instance = new ExampleElevator();
     return instance;
   }
 
