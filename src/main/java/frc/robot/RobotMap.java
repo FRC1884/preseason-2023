@@ -6,7 +6,7 @@ import com.swervedrivespecialties.swervelib.ModuleConfiguration;
 import com.swervedrivespecialties.swervelib.SdsModuleConfigurations;
 
 public class RobotMap {
-  public static class ElevatorMap {
+  public static class ExampleElevatorMap {
     public static final int master = 4;
     public static final int slave = 5;
 
@@ -57,25 +57,22 @@ public class RobotMap {
 
     public static final Version VERSION = Version.MK4;
 
-    public static final ModuleConfiguration MK3_MODULE_CONFIGURATION =
-        SdsModuleConfigurations.MK3_STANDARD;
-    public static final ModuleConfiguration MK4_MODULE_CONFIGURATION =
-        SdsModuleConfigurations.MK4_L1;
+    public static final ModuleConfiguration MK3_MODULE_CONFIGURATION = SdsModuleConfigurations.MK3_STANDARD;
+    public static final ModuleConfiguration MK4_MODULE_CONFIGURATION = SdsModuleConfigurations.MK4_L1;
 
     public static ModuleConfiguration getModuleConfiguration() {
       return VERSION == Version.MK3 ? MK3_MODULE_CONFIGURATION : MK4_MODULE_CONFIGURATION;
     }
 
-    public static final Mk3SwerveModuleHelper.GearRatio MK3_GEAR_RATIO =
-        Mk3SwerveModuleHelper.GearRatio.STANDARD;
-    public static final Mk4SwerveModuleHelper.GearRatio MK4_GEAR_RATIO =
-        Mk4SwerveModuleHelper.GearRatio.L1;
+    public static final Mk3SwerveModuleHelper.GearRatio MK3_GEAR_RATIO = Mk3SwerveModuleHelper.GearRatio.STANDARD;
+    public static final Mk4SwerveModuleHelper.GearRatio MK4_GEAR_RATIO = Mk4SwerveModuleHelper.GearRatio.L1;
 
     public static final double TRACKWIDTH_METERS = 0.617; // FIXME Measure and set trackwidth
     /**
      * The front-to-back distance between the drivetrain wheels.
      *
-     * <p>Should be measured from center to center.
+     * <p>
+     * Should be measured from center to center.
      */
     public static final double WHEELBASE_METERS = 0.617; // FIXME Measure and set wheelbase
 
@@ -112,4 +109,16 @@ public class RobotMap {
     public static final int DRIVER_JOYSTICK = 0;
     public static final int OPERATOR_JOYSTICK = 1;
   }
+
+  public static class ArmMap {
+    public static final int MotorMaster = 0; // FIXME Set Arm left motor ID
+    public static final int rotatermaster = 0; // FIXME Set Arm right motor ID
+  }
+
+  public static class ElevatorMap {
+    public static final int leader = 0; //FIXME Set left elevator motor ID
+    public static final int follow = 0; //FIXME Set right elevator motor ID
+    public static final int GEAR_RATIO = 40;
+  }
 }
+

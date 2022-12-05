@@ -32,11 +32,11 @@ public class Vision extends SubsystemBase {
   public double getAngle() {
     return latestTarget.getYaw();
   }
-
+  /* 
   public double getRange() {
     // return latestTarget.
   }
-
+  */
   @Override
   public void periodic() {
     updateResult();

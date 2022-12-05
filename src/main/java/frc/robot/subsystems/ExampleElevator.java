@@ -19,7 +19,8 @@ public class ExampleElevator extends SubsystemBase {
   private static final int CurrentLimit = 20;
 
   public static ExampleElevator getInstance() {
-    if (instance == null) instance = new ExampleElevator();
+    if (instance == null)
+      instance = new ExampleElevator();
     return instance;
   }
 
@@ -52,7 +53,7 @@ public class ExampleElevator extends SubsystemBase {
     setpoints.put(Setpoint.STATE_2, 200);
     setpoints.put(Setpoint.STATE_3, 300);
 
-    motor = TalonSRXFactory.createDefaultTalon(RobotMap.ElevatorMap.master);
+    motor = TalonSRXFactory.createDefaultTalon(RobotMap.ExampleElevatorMap.master);
 
     motor.configPeakCurrentLimit(CurrentLimit);
     motor.configPeakCurrentDuration(0);
